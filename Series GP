@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        float a,b;
+        int n;
+        cin>>a>>b>>n;
+        float r=b/a,an=a;
+        an=a*pow(r,n-1);
+        cout<<floor<<an<<"\n";
+    }
+    return 0;
+    }
+}
