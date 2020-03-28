@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int i,n;
+        cin>>n;
+        int arr[n];
+        for(i=0;i<n;i++)
+        {
+            cin>>arr[i];
+        }
+        int largest_length=1;
+        int second_largest=0;
+        for(i=0;i<n;i++)
+        {
+            if(largest_length<arr[i])
+            {
+                largest_length=arr[i];
+        }
+        }
+        for(i=0;i<n;i++)
+        {
+            if((arr[i]>second_largest)&&arr[i]<largest_length)
+            {
+                second_largest=arr[i];
+            }
+        }
+        cout<<second_largest<<"\n";
+    }
+    return 0;
+}
